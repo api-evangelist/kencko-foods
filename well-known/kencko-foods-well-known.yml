@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: live fetch of https://kencko.com/.well-known/*
+host: https://kencko.com
+note: >-
+  kencko.com is a Shopify-hosted storefront. The OIDC/OAuth discovery documents
+  below are served by Shopify's Customer Account API (issuer
+  shopify.com/authentication/5125767232) that backs the store's customer login,
+  not a first-party Kencko developer API. Captured verbatim as they are present
+  on the provider's own host. The scopes advertised include a
+  customer-account-mcp-api:full scope (Shopify's Customer Account MCP surface).
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: kencko-foods-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: kencko-foods-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
